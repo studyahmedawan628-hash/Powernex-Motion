@@ -1,0 +1,148 @@
+const media = (group, names) => names.map((name) => `/projects/${group}/${name}`);
+
+export const projects = [
+    {
+        id: "field-work-and-system-integration",
+        title: "Field Work & System Integration",
+        category: "Field Work",
+        shortDescription: "Supplied field documentation covering solar installation, structural and civil work, storage, inverter equipment, and electrical integration. Individual project associations were not supplied.",
+        coverImage: "/projects/field-work-and-system-integration/image-01.jpeg",
+        images: media("field-work-and-system-integration", ["image-01.jpeg", "image-02.jpeg", "image-03.jpeg", "image-04.jpeg", "image-05.jpg", "image-06.jpeg", "image-07.jpeg", "image-08.jpeg", "image-09.jpeg", "image-10.jpeg", "image-11.jpeg", "image-12.jpeg", "image-13.jpeg", "image-14.jpeg"]),
+        featured: true,
+        layout: "wide",
+    },
+    {
+        id: "fg-ps-04-building-1-15kw",
+        title: "FG PS-04 - Building 1",
+        category: "Mechanical Structure",
+        capacity: "15 kW",
+        stage: "Mechanical structure completed",
+        shortDescription: "Supplied documentation for the mechanical structure at FG PS-04, Building 1.",
+        coverImage: "/projects/fg-ps-04-building-1-15kw/image-01.jpeg",
+        images: media("fg-ps-04-building-1-15kw", ["image-01.jpeg"]),
+        layout: "standard",
+    },
+    {
+        id: "civil-work-ps-1",
+        title: "PS-1 Civil Work",
+        category: "Civil Work",
+        shortDescription: "Two supplied photographs documenting civil work at PS-1.",
+        coverImage: "/projects/civil-work-ps-1/image-02.jpeg",
+        images: media("civil-work-ps-1", ["image-01.jpeg", "image-02.jpeg"]),
+        layout: "portrait",
+    },
+    {
+        id: "fg-ps-04-g-22-area",
+        title: "FG PS-04 (G) - 22 Area",
+        category: "Mechanical Structure",
+        stage: "Work in progress",
+        shortDescription: "Supplied work-in-progress documentation for the mechanical structure at FG PS-04 (G), 22 Area.",
+        coverImage: "/projects/fg-ps-04-g-22-area/image-01.jpeg",
+        images: media("fg-ps-04-g-22-area", ["image-01.jpeg"]),
+        layout: "wide",
+    },
+    {
+        id: "fg-12-15kw",
+        title: "FG-12",
+        category: "Mechanical Structure",
+        capacity: "15 kW",
+        stage: "Mechanical structure complete",
+        shortDescription: "Supplied documentation of the completed mechanical structure at FG-12.",
+        coverImage: "/projects/fg-12-15kw/image-01.jpeg",
+        images: media("fg-12-15kw", ["image-01.jpeg"]),
+        layout: "standard",
+    },
+    {
+        id: "fg-pg-bs-block",
+        title: "FG-PG BS Block",
+        category: "Mechanical Structure",
+        shortDescription: "Supplied documentation of mechanical structure work at the FG-PG BS Block.",
+        coverImage: "/projects/fg-pg-bs-block/image-01.jpeg",
+        images: media("fg-pg-bs-block", ["image-01.jpeg"]),
+        layout: "portrait",
+    },
+    {
+        id: "ps-03-15kw",
+        title: "PS-03 Site Building",
+        category: "Mechanical Structure",
+        capacity: "15 kW",
+        shortDescription: "Supplied mechanical-structure documentation for the PS-03 site building.",
+        coverImage: "/projects/ps-03-15kw/image-01.jpeg",
+        images: media("ps-03-15kw", ["image-01.jpeg"]),
+        layout: "wide",
+    },
+    {
+        id: "ps-05-building-2-10kw",
+        title: "PS-05 - Building 2",
+        category: "Mechanical Structure",
+        capacity: "10 kW",
+        stage: "Red oxide stage",
+        shortDescription: "Two supplied photographs documenting mechanical structure work at the red oxide stage for PS-05, Building 2.",
+        coverImage: "/projects/ps-05-building-2-10kw/image-02.jpeg",
+        images: media("ps-05-building-2-10kw", ["image-01.jpeg", "image-02.jpeg"]),
+        layout: "standard",
+    },
+    {
+        id: "ps-05-building-1-15kw",
+        title: "PS-05 - Building 1",
+        category: "Mechanical Structure",
+        capacity: "15 kW",
+        shortDescription: "Two supplied photographs documenting mechanical structure work at PS-05, Building 1.",
+        coverImage: "/projects/ps-05-building-1-15kw/image-02.jpeg",
+        images: media("ps-05-building-1-15kw", ["image-01.jpeg", "image-02.jpeg"]),
+        layout: "wide",
+    },
+    {
+        id: "school-no-05-girls",
+        title: "School No. 05 (Girls)",
+        category: "Mechanical Structure",
+        stage: "Mechanical work under process",
+        shortDescription: "Two supplied photographs documenting mechanical work under process at School No. 05 (Girls).",
+        coverImage: "/projects/school-no-05-girls/image-02.jpeg",
+        images: media("school-no-05-girls", ["image-01.jpeg", "image-02.jpeg"]),
+        layout: "portrait",
+    },
+];
+
+export const projectCategories = ["All Projects", ...new Set(projects.map((project) => project.category))];
+
+// Kept separate because the supplied folder does not establish which named project it belongs to.
+export const unassignedProjectMedia = [
+    {
+        type: "video",
+        path: "/projects/field-video/site-progress.mp4",
+        sourceGroup: "Field Video",
+        note: "Individual project association was not supplied.",
+    },
+];
+
+export const constructionStory = [
+    {
+        number: "01",
+        title: "Civil Work",
+        description: "Foundation and site-preparation details from the supplied PS-1 civil-work group.",
+        image: "/projects/civil-work-ps-1/image-01.jpeg",
+        alt: "Civil work documented at PS-1",
+    },
+    {
+        number: "02",
+        title: "Mechanical Structure",
+        description: "Steel framing documented during mechanical structure work at PS-03.",
+        image: "/projects/ps-03-15kw/image-01.jpeg",
+        alt: "Mechanical structure work documented at PS-03",
+    },
+    {
+        number: "03",
+        title: "Solar Installation",
+        description: "Panel installation shown in the supplied field-work collection.",
+        image: "/projects/field-work-and-system-integration/image-02.jpeg",
+        alt: "Solar-panel installation in the supplied field-work collection",
+    },
+    {
+        number: "04",
+        title: "System Integration",
+        description: "Inverter, storage, and electrical integration shown in the supplied field-work collection.",
+        image: "/projects/field-work-and-system-integration/image-11.jpeg",
+        alt: "Inverter and storage equipment in the supplied field-work collection",
+    },
+];
